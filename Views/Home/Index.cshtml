@@ -1,0 +1,34 @@
+﻿@{
+    List<Pizza> lista = new List<Pizza>{
+        new Pizza("Margherita", "classica pizza margherita", "https://picsum.photos/500/300", 3.50),
+        new Pizza("Marinara", "Pizza marinara", "https://picsum.photos/500/300", 5.00),
+        new Pizza("Quattro formaggi", "Pizza con quattro formaggi differenti", "https://picsum.photos/500/300", 6.50),
+        new Pizza("Quattro stagioni", "Pizza ispirata alle stagioni", "https://picsum.photos/500/300", 7.50),
+        new Pizza("Wrustel e patatine", "Il titolo dice già tutto", "https://picsum.photos/500/300", 5.50)
+    };
+}
+
+<div class="text-center">
+
+    <table class="table">
+      <thead>
+        <tr>
+            <th scope="col">Titolo</th>
+            <th scope="col">Descrizione</th>
+            <th scope="col">immagine</th>
+            <th scope="col">Prezzo</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach(Pizza pizza in lista){
+            <tr>
+                <img src="@pizza.Immagine">
+                <h1>@pizza.Nome</h1>
+                <p>@pizza.Nome</p>
+                <h2>@pizza.Prezzo €</h2>
+            </tr>
+        }
+      </tbody>
+</table>
+    
+</div>
